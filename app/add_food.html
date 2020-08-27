@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="Restaurant">
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Restaurant</title>
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js" data-semver="1.0.8"></script>    
+    <link rel="stylesheet" href="addProduct.css">
+    <script src="app.js"></script>
+  </head>
+  
+  <body ng-controller="MainRestaurantCtrl">
+
+    <div class="container"> 
+        <div class="left">
+          <div class="img"></div>
+        </div>        
+        <div class="right">
+        <form name="myForm" action="/saveData" method="POST">
+          <div class="form">
+            <div class="avatar-img">
+                <img style="height: 105px; width: 125px;" src="./images/yummy.jpg">
+            </div>
+            <h2>ADD DETAILS</h2>
+            <input type="text" placeholder="Name Of Food" name="name" ng-model="foodName" required>
+            <select class="select" type="text" ng-options="item for item in category" ng-model="item" name="category" required>
+                <option value="" disabled selected><div style="color: gray;">Choose Category</div></option>
+            </select>
+            <select class="select" type="text" ng-options="type for type in foodType" ng-model="type" name="type" required>
+                <option value="" disabled selected><div style="color: gray;">Food Type</div></option>
+            </select>      
+            <select class="select" type="text" ng-options="time for time in timeToServe" ng-model="time" name="time_to_serve" required>
+                <option value="" disabled selected><div style="color: gray;">Time to Serve</div></option>
+            </select>
+            <input type="number" placeholder="Price" name="price" ng-model="price" required>
+            <input type="file" placeholder="Image Name" name="image" accept="image/*" ng-model="image" required>
+            <div class="button-align">
+              <div ng-show="!disableSave" style="text-align: center;font-size: 14px;" class="form-button" ng-click="checkForDuplicateEntry(foodName)">SAVE</div>
+              <div ng-show="disableSave" style="background-color:gray; text-align: center;font-size: 14px;" class="form-button" ng-click="checkForDuplicateEntry(foodName)">SAVE</div>
+              <button ng-show="!allowToSubmit" class="form-button-disabled">SUBMIT</button>              
+              <button ng-show="allowToSubmit" type="submit" class="form-button">SUBMIT</button>              
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="backIcon">
+          <a href="./index.html">
+            <img class="back" src="images/back.png" style="height: 30px; width: 30px; margin-top: 30px;">
+          </a>
+      </div>
+      </div>
+  <div></div>
+  </body>
+
+</html>
+
+

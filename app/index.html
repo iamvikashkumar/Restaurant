@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ng-app="Restaurant">
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Restaurant</title>
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js" data-semver="1.0.8"></script>    
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+  </head>
+  
+  <body ng-controller="MainRestaurantCtrl">
+    <div class="container">
+      <div class="header">
+        <form ng-show="!order" class="search">
+          <input type="search" class="search__input" placeholder="Search for food">
+        </form>
+      </div>
+    </div>
+    <div ng-show="!order" class="main">
+        <ul class="filteredData_head">
+          <li class="filteredData_item" ng-repeat="filter in filteredOption">
+            <div class="filteredData_item_block" ng-click="filterSelected(filter)">
+              <img class="display_image" ng-src="./images/{{filter.image}}" style="height: 70px; width: 70px; margin-top: 30px;">
+              <div class="name">{{filter.name}}</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="type">
+          <button class="btn" ng-click="filterType('All')"><h3 style="margin: 0px;">All</h3></button>
+          <button class="btn" ng-click="filterType('Veg')"><h3 style="margin: 0px;">Veg</h3></button>
+          <button class="btn" ng-click="filterType('Non-Veg')"><h3 style="margin: 0px;">Non-Veg</h3></button>
+          <select class="btn" style="width: 16%;" type="text" ng-options="type for type in sort" ng-change="sortBasedOnTimeOrType(type)" ng-model="type" name="type" required>
+            <option value="" disabled selected><div style="color: gray;">SORT</div></option>
+          </select>   
+        </div>
+        
+
+    <ul class="cards">
+      <li class="cards_item" ng-repeat="d in data">
+        <div class="card"> 
+          <div class="card_image"><img class="display_image" ng-src="./images/{{d.image}}"></div>
+          <div ng-show="d.type == 'Non-Veg'" class="card_content_nonveg">
+            <div layout="row" layout-align="space-around center">                      
+              <div>
+                <h2 class="card_title">{{d.name}}
+                </h2> 
+                <h3 style="margin: 0px;">Price: {{d.price}}/-</h3>
+                <h4 style="margin: 0px;">Time: {{d.time_to_serve}}</h4>
+                <div class="type">
+                  <button class="btn1" ng-click="noOfUnit('-', d)"><h3 style="margin: 0px;">-</h3></button>
+                  <button class="btn3"><h3 style="margin: 0px;">{{d.unit}}</h3></button>
+                  <button class="btn1" ng-click="noOfUnit('+', d)"><h3 style="margin: 0px;">+</h3></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-show="d.type == 'Veg'" class="card_content_veg">
+            <h2 class="card_title">{{d.name}}
+            </h2>
+            <h4 style="margin: 0px;">Price: {{d.price}}/-</h4>
+            <h4 style="margin: 0px;">Time: {{d.time_to_serve}}</h4>
+            <div class="type">
+              <button class="btn1" ng-click="noOfUnit('-', d)"><h3 style="margin: 0px;">-</h3></button>
+              <button class="btn3"><h3 style="margin: 0px;">{{d.unit}}</h3></button>
+              <button class="btn1" ng-click="noOfUnit('+', d)"><h3 style="margin: 0px;">+</h3></button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    </div>
+    <div ng-show="!order" class="addIteam">
+      <a href="./add_food.html">
+        <img class="checkout" src="images/add_food.png" style="height: 130px; width: 150px; margin-top: 30px;">
+      </a>
+    </div>
+    <div class="myorder" ng-click="showOrder()">
+        <img class="checkout" src="images/order.gif" style="cursor: pointer; height: 130px; width: 150px; margin-top: 30px;">
+    </div>
+
+
+    <div ng-show="order">
+      <h1>Your Orders</h1>
+      <ul class="cards">
+        <li class="cards_item" ng-repeat="d in myOrder">
+          <div class="card">
+          <div class="card_image"><img class="display_image" ng-src="./images/{{d.image}}"></div>
+            <div class="card_content_nonveg">
+              <div layout="row" layout-align="space-around center">                      
+                <div>
+                  <h2 class="card_title">{{d.name}}
+  
+                    <!-- <div class="rating"><img class="display_image" src="./images/star.png" style="height: 16px; width: 16px;">
+                      <div class="rating_text">4.8 (rating)</div>
+                    </div> -->
+                  </h2> 
+                  <h3 style="margin: 0px;">Price: {{d.price}}/-</h3>
+                  <div class="type">
+                    <button ng-disabled="true" class="btn1" ng-click="noOfUnit('-', d)"><h3 style="margin: 0px;">-</h3></button>
+                    <button class="btn3"><h3 style="margin: 0px;">{{d.unit}}</h3></button>
+                    <button ng-disabled="true" class="btn1" ng-click="noOfUnit('+', d)"><h3 style="margin: 0px;">+</h3></button>
+                  </div>
+                </div>
+              </div>
+              <!-- <p class="card_text">{{d.description}}</p> -->
+              <!-- <button class="btn card_btn">Read More</button> -->
+            </div>
+          </div>
+        </li>
+      </ul>  
+      <div class="modify" ng-click="showOrder()">+ Modify Items</div>
+      <hr style="width: 60%;">
+      <div class="type" ng-repeat="d in myOrder">
+        <div class="product_price">
+            <div style="float: left;">{{d.name}}</div>
+            <div style="float: right;">{{d.price}} X {{d.unit}} = Rs.{{d.price*d.unit}}/-</div> 
+        </div>
+      </div>
+      <hr style="width: 60%;">
+      <div class="type">
+        <div class="product_price">
+          <div style="float: left; font-weight: bold;">Subtotal</div>
+          <div style="float: right; font-weight: bold;">Rs.{{subTotal}}/-</div> 
+        </div>
+      </div>
+      <div class="type">
+        <div class="product_price">
+          <div style="float: left; font-weight: bold;">Service Charges [Fixed]</div>
+          <div style="float: right; font-weight: bold;">Rs.75/-</div> 
+        </div>
+      </div>
+      <hr style="width: 60%;">
+      <div class="type">
+        <div class="product_price">
+          <div style="float: left; font-weight: bold;">Total</div>
+          <div style="float: right; font-weight: bold;">Rs.{{subTotal+75}}/-</div> 
+        </div>
+      </div>
+      <hr style="width: 60%; margin-top: -8px;">
+    </div>
+      <h3 class="made_by">Designed & Developed By <b>Vikash Kumar<b></h3>
+    </body>
+
+</html>
+

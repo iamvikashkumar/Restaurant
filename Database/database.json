@@ -1,0 +1,31 @@
+{"_id":{"$oid":"5f4525e505187f70be5c2c37"},"name":"Kakori Kebabs","category":"Starter","type":"Non-Veg","time_to_serve":"30 Mins","price":"210","image":"kakori_kbabs.jpg"}
+{"_id":{"$oid":"5f4526d105187f70be5c2c38"},"name":"Chilli Chicken","category":"Starter","type":"Non-Veg","time_to_serve":"45 Mins","price":"170","image":"stir_fried_chilli_chicken.jpg"}
+{"_id":{"$oid":"5f45271805187f70be5c2c39"},"name":"Paneer Tikkas","category":"Starter","type":"Veg","time_to_serve":"30 Mins","price":"180","image":"paneer_tikkas.jpg"}
+{"_id":{"$oid":"5f45277505187f70be5c2c3a"},"name":"Aloo-Dal ki Tikki","category":"Starter","type":"Veg","time_to_serve":"30 Mins","price":"130","image":"aloo_dal_tkki.jpg"}
+{"_id":{"$oid":"5f4527c005187f70be5c2c3b"},"name":"Chicken Satay","category":"Starter","type":"Non-Veg","time_to_serve":"45 Mins","price":"165","image":"chicken_satay.jpg"}
+{"_id":{"$oid":"5f4528e205187f70be5c2c3c"},"name":"Panini","category":"Breakfast","type":"Non-Veg","time_to_serve":"30 Mins","price":"130","image":"panini.jpg"}
+{"_id":{"$oid":"5f45292405187f70be5c2c3d"},"name":"Granola","category":"Breakfast","type":"Veg","time_to_serve":"30 Mins","price":"120","image":"granola.jpg"}
+{"_id":{"$oid":"5f45295c05187f70be5c2c3e"},"name":"Omelette","category":"Breakfast","type":"Non-Veg","time_to_serve":"20 Mins","price":"90","image":"omelette.jpg"}
+{"_id":{"$oid":"5f4529aa05187f70be5c2c3f"},"name":"Vegetable Bread","category":"Breakfast","type":"Veg","time_to_serve":"20 Mins","price":"95","image":"vegetable_bread.jpg"}
+{"_id":{"$oid":"5f452a0705187f70be5c2c40"},"name":"Porridge","category":"Breakfast","type":"Veg","time_to_serve":"30 Mins","price":"110","image":"porridge.jpg"}
+{"_id":{"$oid":"5f452ad205187f70be5c2c41"},"name":"Carrot Salad","category":"Salads","type":"Veg","time_to_serve":"10 Mins","price":"70","image":"carrot_salad.jpg"}
+{"_id":{"$oid":"5f452b2d05187f70be5c2c42"},"name":"Leafy Walnuts","category":"Salads","type":"Veg","time_to_serve":"20 Mins","price":"90","image":"walnuts.jpg"}
+{"_id":{"$oid":"5f452b6805187f70be5c2c43"},"name":"Beetroot Feta","category":"Salads","type":"Veg","time_to_serve":"20 Mins","price":"110","image":"beetroot_beta.jpg"}
+{"_id":{"$oid":"5f452ba005187f70be5c2c44"},"name":"Watermelon Salad","category":"Salads","type":"Veg","time_to_serve":"20 Mins","price":"60","image":"watermelon.jpg"}
+{"_id":{"$oid":"5f452bf505187f70be5c2c45"},"name":"Mixed Bean","category":"Salads","type":"Veg","time_to_serve":"30 Mins","price":"110","image":"mixed_bean.jpg"}
+{"_id":{"$oid":"5f452c6f05187f70be5c2c46"},"name":"Kathal Biryani","category":"Meal","type":"Veg","time_to_serve":"45 Mins","price":"220","image":"kathal_biryani.jpg"}
+{"_id":{"$oid":"5f452cbc05187f70be5c2c47"},"name":"Pepper Chicken","category":"Meal","type":"Non-Veg","time_to_serve":"45 Mins","price":"210","image":"pepper_chicken.jpg"}
+{"_id":{"$oid":"5f452d2a05187f70be5c2c48"},"name":"Hariyali Machli","category":"Meal","type":"Non-Veg","time_to_serve":"60 Mins","price":"250","image":"hariyali_machli.jpg"}
+{"_id":{"$oid":"5f452dbe05187f70be5c2c49"},"name":"Tomato Rice","category":"Meal","type":"Veg","time_to_serve":"30 Mins","price":"190","image":"tomato_rice.jpg"}
+{"_id":{"$oid":"5f452e6505187f70be5c2c4a"},"name":"Nargisi Kofta","category":"Meal","type":"Veg","time_to_serve":"60 Mins","price":"220","image":"nargisi_kofta.jpg"}
+{"_id":{"$oid":"5f452f2a05187f70be5c2c4b"},"name":"Thandai","category":"Beverage","type":"Veg","time_to_serve":"20 Mins","price":"80","image":"thandai.jpg"}
+{"_id":{"$oid":"5f452f4905187f70be5c2c4c"},"name":"Spiced Coffee","category":"Beverage","type":"Veg","time_to_serve":"20 Mins","price":"110","image":"spiced_coffee.jpg"}
+{"_id":{"$oid":"5f452f8805187f70be5c2c4d"},"name":"Kesaria Doodh","category":"Beverage","type":"Veg","time_to_serve":"20 Mins","price":"105","image":"kesaria_doodh.jpg"}
+{"_id":{"$oid":"5f45305605187f70be5c2c4e"},"name":"Aam Panna","category":"Beverage","type":"Veg","time_to_serve":"20 Mins","price":"110","image":"aam _panna.jpg"}
+{"_id":{"$oid":"5f45307e05187f70be5c2c4f"},"name":"Jaljeera","category":"Beverage","type":"Veg","time_to_serve":"10 Mins","price":"70","image":"jaljeera.jpg"}
+{"_id":{"$oid":"5f4533f20b97b5172db6bb8a"},"name":"Mutton Korma","category":"Meal","type":"Non-Veg","time_to_serve":"90 Mins","price":"330","image":"mutton_korma.jpg"}
+{"_id":{"$oid":"5f45343e0b97b5172db6bb8b"},"name":"Grilled Chicken","category":"Meal","type":"Non-Veg","time_to_serve":"60 Mins","price":"300","image":"grilled_chicken.jpg"}
+{"_id":{"$oid":"5f45348d0b97b5172db6bb8c"},"name":"Fish Biryani","category":"Meal","type":"Non-Veg","time_to_serve":"60 Mins","price":"280","image":"Fish_biryani.jpg"}
+{"_id":{"$oid":"5f4535060b97b5172db6bb8d"},"name":"Chicken 65","category":"Meal","type":"Non-Veg","time_to_serve":"45 Mins","price":"260","image":"chicken_65.jpg"}
+{"_id":{"$oid":"5f4535780b97b5172db6bb8e"},"name":"Nihari Gosht","category":"Meal","type":"Non-Veg","time_to_serve":"90 Mins","price":"450","image":"nihari_gosht.jpg"}
+{"_id":{"$oid":"5f476a373cc4d767c03472a3"},"name":"Cool Kiwi Juice","category":"Beverage","type":"Veg","time_to_serve":"20 Mins","price":"130","image":"kiwi.jpg"}
